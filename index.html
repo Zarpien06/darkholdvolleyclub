@@ -1,72 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <!-- Vista responsiva para dispositivos móviles -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Base -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Título claro y con palabras clave -->
-    <title>Darkhold Volley Club - Club Deportivo de Voleibol en Bogotá</title>
+  <!-- Title & primary description (SEO) -->
+  <title>Darkhold Volley Club — Club de Voleibol en Bogotá | Entrenamiento y Torneos</title>
+  <meta name="description" content="Darkhold Volley Club en Bogotá: entrenamientos formativos y competitivos para todas las edades. Inscripciones abiertas, entrenadores certificados y participación en torneos locales.">
+  <meta name="keywords" content="voleibol Bogotá, club de voleibol, entrenamientos voleibol, torneos voleibol, clases voleibol Bogotá">
+  <meta name="author" content="Darkhold Volley Club">
 
-    <!-- Descripción para buscadores -->
-    <meta name="description" content="Únete a Darkhold Volley Club, el club de voleibol formativo y competitivo en Bogotá, Colombia. Entrena con planes para todos los niveles y participa en torneos.">
+  <!-- Robots & indexing -->
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://darkholdvolleyclub.netlify.app/">
 
-    <!-- Palabras clave relevantes -->
-    <meta name="keywords" content="voleibol, club deportivo, Bogotá, entrenamiento, torneos, voleibol Bogotá">
+  <!-- Mobile / PWA hints -->
+  <meta name="theme-color" content="#0066cc">
+  <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Autor -->
-    <meta name="author" content="Darkhold Volley Club">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0066cc">
+  <meta name="msapplication-TileColor" content="#0066cc">
 
-    <!-- Evitar que los motores de búsqueda bloqueen la página -->
-    <meta name="robots" content="index, follow">
+  <!-- Preconnects & preload (mejor performance en fonts y recursos críticos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preload hero image (ajusta la URL al archivo real si lo deseas) -->
+  <link rel="preload" as="image" href="/images/hero-darkhold.webp">
 
-    <!-- Open Graph para redes sociales -->
-    <meta property="og:title" content="Darkhold Volley Club - Club Deportivo de Voleibol en Bogotá">
-    <meta property="og:description" content="Únete a Darkhold Volley Club, el club de voleibol formativo y competitivo en Bogotá, Colombia. Entrena con planes para todos los niveles y participa en torneos.">
-    <meta property="og:image" content="URL-de-tu-imagen-destacada.jpg">
-    <meta property="og:url" content="https://darkholdvolleyclub.netlify.app/">
-    <meta property="og:type" content="website">
+  <!-- Google Fonts (carga optimizada) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  </noscript>
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Darkhold Volley Club - Club Deportivo de Voleibol en Bogotá">
-    <meta name="twitter:description" content="Únete a Darkhold Volley Club, el club de voleibol formativo y competitivo en Bogotá, Colombia. Entrena con planes para todos los niveles y participa en torneos.">
-    <meta name="twitter:image" content="URL-de-tu-imagen-destacada.jpg">
+  <!-- Critical CSS / Main stylesheet -->
+  <!-- Si tienes CSS crítico muy pequeño, inlínalo aquí para evitar FOUC. -->
+  <link rel="stylesheet" href="/css/style.min.css">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://darkholdvolleyclub.netlify.app/">
+  <!-- Optional icon font (usa solo si lo necesitas) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
 
-    <!-- Iconos -->
-    <link rel="shortcut icon" href="foto.jpg" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <!-- Open Graph: comparte una imagen optimizada (1200×630) -->
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Darkhold Volley Club">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Darkhold Volley Club — Club de Voleibol en Bogotá">
+  <meta property="og:description" content="Entrena en Darkhold Volley Club: planes para todas las edades, entrenadores certificados y participación en torneos. Inscríbete hoy.">
+  <meta property="og:url" content="https://darkholdvolleyclub.netlify.app/">
+  <meta property="og:image" content="https://darkholdvolleyclub.netlify.app/og-image-1200x630.webp">
+  <meta property="og:image:alt" content="Equipo de Darkhold Volley Club en la cancha">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-    <!-- Tema de color -->
-    <meta name="theme-color" content="#007bff">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@tu_twitter"> <!-- opcional -->
+  <meta name="twitter:creator" content="@tu_twitter"> <!-- opcional -->
+  <meta name="twitter:title" content="Darkhold Volley Club — Club de Voleibol en Bogotá">
+  <meta name="twitter:description" content="Entrenamientos formativos y competitivos en Bogotá. Inscripciones abiertas.">
+  <meta name="twitter:image" content="https://darkholdvolleyclub.netlify.app/og-image-1200x630.webp">
 
-     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Structured Data (JSON-LD) - SportsOrganization + LocalBusiness + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://darkholdvolleyclub.netlify.app/#website",
+        "url": "https://darkholdvolleyclub.netlify.app/",
+        "name": "Darkhold Volley Club",
+        "publisher": {
+          "@id": "https://darkholdvolleyclub.netlify.app/#org"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://darkholdvolleyclub.netlify.app/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "SportsOrganization",
+        "@id": "https://darkholdvolleyclub.netlify.app/#org",
+        "name": "Darkhold Volley Club",
+        "url": "https://darkholdvolleyclub.netlify.app/",
+        "logo": "https://darkholdvolleyclub.netlify.app/images/logo.png",
+        "sameAs": [
+          "https://www.facebook.com/darkholdvolleyclub",
+          "https://www.instagram.com/darkholdvolleyclub"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle / Dirección aquí",
+          "addressLocality": "Bogotá",
+          "addressRegion": "Cundinamarca",
+          "postalCode": "XXXXX",
+          "addressCountry": "CO"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+57 300 0000000",
+          "contactType": "customer service",
+          "areaServed": "CO",
+          "availableLanguage": ["es"]
+        },
+        "openingHours": ["Mo-Fr 16:00-21:00", "Sa 08:00-12:00"]
+      },
+      {
+        "@type": "LocalBusiness",
+        "name": "Darkhold Volley Club - Sede Principal",
+        "image": ["https://darkholdvolleyclub.netlify.app/images/club-photo-1.webp"],
+        "telephone": "+57 300 0000000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle / Dirección aquí",
+          "addressLocality": "Bogotá",
+          "addressRegion": "Cundinamarca",
+          "postalCode": "XXXXX",
+          "addressCountry": "CO"
+        },
+        "url": "https://darkholdvolleyclub.netlify.app/",
+        "priceRange": "$$"
+      }
+    ]
+  }
+  </script>
 
-    <!-- Fuentes externas y estilos -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Preload y carga optimizada de Google Fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    </noscript>
+  <!-- Google Analytics 4 (gtag) - reemplaza G-XXXXXX por tu ID real -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // Reemplaza 'G-XXXXXXXXXX' por tu Measurement ID
+    gtag('config', 'G-XXXXXXXXXX', {
+      'anonymize_ip': true,
+      'send_page_view': true
+    });
+  </script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
+  <!-- Optional: Google site verification (si corresponde) -->
+  <!-- <meta name="google-site-verification" content="tu_codigo_de_verificacion"> -->
+
+  <!-- Optional: CSP header note (mejor aplicar desde servidor) -->
+  <!-- Nota: si usas CSP, verifica que los scripts/fonts/recursos estén permitidos. -->
 
 </head>
+
 <body>
 
    <!-- Navigation -->
@@ -1527,4 +1614,5 @@ document.addEventListener('keydown', function(e) {
 
     </script>
 </body>
+
 </html>
